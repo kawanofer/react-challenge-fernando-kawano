@@ -1,25 +1,22 @@
-# Getting Started with Create React App
+# React Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Clone the repo
 
-## Available Scripts
+git clone https://github.com/kawanofer/react-challenge-fernando-kawano
 
-In the project directory, you can run:
+## Install dependecies
 
-### `npm start`
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm start
 
-### `npm test`
+## GitHub Pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://kawanofer.github.io/react-challenge-fernando-kawano/
 
-# Challenge React.js ![](https://pasteboard.co/byC31Sq5OMgz.png)
+# Challenge React.js Description ![](https://pasteboard.co/byC31Sq5OMgz.png)
 
 1. Fork this public repository ([https://github.com/sebasworkana/react-challenge.git](https://github.com/sebasworkana/react-challenge.git) ), and create a new branch with the name React-Challenge-"Name and Last Name", then push it to the created branch and give access to us to review the code.
 2. The main challenge is that you create a Page with the following Style and format.
