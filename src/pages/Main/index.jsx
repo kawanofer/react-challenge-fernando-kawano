@@ -5,18 +5,13 @@ import { useDispatch } from 'react-redux'
 import { setFormData } from 'store/redux/formData/actions'
 
 import Button from 'components/Button'
-import HelpText from 'components/HelpText'
 
 import Breakify from './breakify'
 
 const Main = () => {
   const dispatch = useDispatch()
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors }
-  } = useForm({
+  const { handleSubmit, register } = useForm({
     mode: 'onChange',
     defaultValues: { firstName: '', lastName: '' }
   })
@@ -30,7 +25,7 @@ const Main = () => {
 
   return (
     <main>
-      <h1 className='text-3xl font-bold mb-16'>Workana React Test!</h1>
+      <h1 className='text-3xl font-bold mb-16'>React Test!</h1>
 
       <div className='border-grey rounded-md border'>
         <Breakify />
@@ -42,11 +37,9 @@ const Main = () => {
                 <input
                   className='text-dark w-full px-5 py-5 mb-5 border rounded-md leading-tight focus:outline-none text-lg'
                   id='firstName'
+                  required
                   {...register('firstName')}
                 />
-                {errors.firstName && (
-                  <HelpText>{errors.firstName.message}</HelpText>
-                )}
               </div>
 
               <div className='flex flex-col w-full'>
@@ -54,11 +47,9 @@ const Main = () => {
                 <input
                   className='text-dark w-full px-5 py-5 mb-5 border rounded-md leading-tight focus:outline-none text-lg'
                   id='lastName'
+                  required
                   {...register('lastName')}
                 />
-                {errors.lastName && (
-                  <HelpText>{errors.lastName.message}</HelpText>
-                )}
               </div>
             </div>
             <div className='text-center'>

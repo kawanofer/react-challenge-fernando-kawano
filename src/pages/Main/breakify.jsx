@@ -2,35 +2,39 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import elements from 'data/elements'
-import { capitalize } from 'lodash'
+import { toUpper } from 'lodash'
 
 export default function Breakify() {
   const { formData } = useSelector((state) => state.formData)
 
   const matchWord = (word) => {
-    const regex = new RegExp(`(${elements.join('|')})`, 'gi')
-    let found = false
+    const matchingElements = new Set()
+    for (let i = 0; i < elements.length; i++) {
+      if (word.toLowerCase().includes(elements[i].toLowerCase())) {
+        matchingElements.add(elements[i])
+      }
+    }
+    const firstItemFound = [...matchingElements][0]
+    const firstIndex = word.toLowerCase().indexOf(firstItemFound.toLowerCase())
+    const before = word.substring(0, firstIndex)
+    const after = word.substring(
+      word.toLowerCase().indexOf(firstItemFound.toLowerCase()) +
+        firstItemFound.length
+    )
     return (
-      <div>
-        {word.split(regex).map((part, index) => {
-          if (elements.includes(part.toUpperCase()) && !found) {
-            found = true
-            return (
-              <span key={index} className='text-green font-extrabold '>
-                {capitalize(part)}
-              </span>
-            )
-          } else {
-            return <span key={index}>{part}</span>
-          }
-        })}
-      </div>
+      <>
+        <span>{before.toLowerCase()}</span>
+        <span className='bg-green px-3 font-extrabold'>
+          {toUpper(firstItemFound)}
+        </span>
+        <span>{after.toLowerCase()}</span>
+      </>
     )
   }
 
   return (
     <div className='py-10 text-white tracking-wider text-center text-8xl text-wrap'>
-      <div className='mb-3'>{matchWord(formData.firstName)}</div>
+      <div className='mb-8'>{matchWord(formData.firstName)}</div>
       <div>{matchWord(formData.lastName)}</div>
     </div>
   )
