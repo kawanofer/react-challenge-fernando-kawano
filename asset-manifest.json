@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-challenge-fernando-kawano/static/css/main.795896d0.css",
-    "main.js": "/react-challenge-fernando-kawano/static/js/main.c7b7d4b9.js",
+    "main.js": "/react-challenge-fernando-kawano/static/js/main.fe3ede2a.js",
     "static/js/453.51e7d9d9.chunk.js": "/react-challenge-fernando-kawano/static/js/453.51e7d9d9.chunk.js",
     "index.html": "/react-challenge-fernando-kawano/index.html",
     "main.795896d0.css.map": "/react-challenge-fernando-kawano/static/css/main.795896d0.css.map",
-    "main.c7b7d4b9.js.map": "/react-challenge-fernando-kawano/static/js/main.c7b7d4b9.js.map",
+    "main.fe3ede2a.js.map": "/react-challenge-fernando-kawano/static/js/main.fe3ede2a.js.map",
     "453.51e7d9d9.chunk.js.map": "/react-challenge-fernando-kawano/static/js/453.51e7d9d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.795896d0.css",
-    "static/js/main.c7b7d4b9.js"
+    "static/js/main.fe3ede2a.js"
   ]
 }
