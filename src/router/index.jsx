@@ -5,7 +5,7 @@ import Main from '../pages/Main'
 
 export function AppRouters() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/react-challenge-fernando-kawano'>
       <Routes>
         <Route path='/' element={<Main />} />
       </Routes>
